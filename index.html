@@ -1,0 +1,152 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-dark.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-lite.min.css">    -->
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-sucroa.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-nord.min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Punctilio</title>
+
+    <style>
+        #demonstration{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+Business Name is Punctilio,
+
+Tel No: 07507 359510,
+Email:info@ Punctilio.co.uk,
+Website: www. Punctilio.co.uk.
+
+Services are
+* manuscripts,
+* business publications,
+* website content,
+* student dissertations,
+* funeral eulogies,
+* letters,
+* C.Vs,
+* application forms.
+
+The moto/catchphrase is, get it right, first time and every time.
+
+-->
+
+<header class="sticky row">
+    <div class="col-sm col-md-10 col-md-offset-1">
+        <a href="#" role="button">Home</a>
+        <a href="#" role="button">About</a>
+        <a href="#" role="button">Contact</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row cols-sm-12 cols-md-10">
+        <div class="col-md-offset-1">
+            <br />
+            <h1>Punctilio <small>get it right, first time and every time.</small></h1>
+            <hr>
+            <h2>Services</h2>
+            <p>
+                <ul>
+                    <li>manuscripts</li>
+                    <li>business publications</li>
+                    <li>website content</li>
+                    <li>student dissertations</li>
+                    <li>funeral eulogies</li>
+                    <li>letters</li>
+                    <li>C.Vs</li>
+                    <li>application forms.</li>
+                </ul>
+            </p>
+            <hr>
+            <h2>Request a Quote</h2>
+            <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+            <hr>
+            <h2>Testimonials</h2>
+            <p>
+                <ul>
+                    <li>Fast, efficent, and correct. -- Anonymous</li>
+                </ul>
+            </p>
+            <hr>
+            <h2>Demonstration</h2>
+            <div id="demonstration">
+                <div class="card">
+                    <h3>Before</h3>
+                    <div class="">
+                        <p>
+                            The idea is to have some <mark class="secondary">txet</mark> here with some <mark class="secondary">errrors</mark> highlighted.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>After</h3>
+                    <div class="">
+                        <p>
+                            Then the same text but proof-read and corrected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center"><br/>
+    <input id="request-a-quote-toggle" type="checkbox"/>
+    <div class="modal" style="text-align:initial;">
+        <div class="card fluid">
+            <label for="request-a-quote-toggle" class="close"></label>
+            <h3 class="section double-padded">Request a quote</h3>
+            <form class="section">
+                <fieldset>
+                    <legend>Manuscript details</legend>
+                    <div class="input-group vertical">
+                        <label for="manuscript-type">Manuscript type</label>
+                        <input type="text" value="" id="manuscript-type" placeholder="Type; C.V., website content">
+                    </div>
+                    <div class="input-group vertical">
+                        <label for="manuscript-size">Size</label>
+                        <input type="text" size="100" value="" id="manuscript-size" placeholder="Approximate size in words or pages">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="section double-padded">
+                <!-- In reality this will probably be part of the form and likely caught by
+                    Javascript which may well then send the mail itself, or something, not sure what -->
+                <label class="button primary" for="request-a-quote-toggle">Submit</label>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="col-sm col-md-10 col-md-offset-1">
+        <ul>
+            <li>Tel No: 07507 359510</li>
+            <li>Email: info@Punctilio.co.uk</li>
+            <li>www.Punctilio.co.uk.</li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+
+</html>
