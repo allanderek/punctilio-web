@@ -9,6 +9,8 @@
     <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-nord.min.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Punctilio</title>
 
     <style>
@@ -129,7 +131,7 @@ The moto/catchphrase is, get it right, first time and every time.
             <div class="section double-padded">
                 <!-- In reality this will probably be part of the form and likely caught by
                     Javascript which may well then send the mail itself, or something, not sure what -->
-                <label class="button primary" for="request-a-quote-toggle">Submit</label>
+                <label id="send-quote-request-button" class="button primary" for="request-a-quote-toggle">Submit</label>
             </div>
             <br/>
         </div>
@@ -146,6 +148,24 @@ The moto/catchphrase is, get it right, first time and every time.
         </ul>
     </div>
 </footer>
+
+<script type="text/javascript">
+/* global $ */
+$(document).ready(function(){
+    $('#send-quote-request-button').click(function(){
+        var main_text = (
+            "Manuscript type: " + $('#manuscript-type').val() +
+            "\n\nApproximate size: " + $('#manuscript-size').val()
+            );
+        var params = {
+            subject: 'Quote request',
+            body: main_text
+        }
+        var url = 'mailto:info@punctilio.co.uk?' + $.param(params);
+        window.open(url);
+    });
+});
+</script>
 
 </body>
 
