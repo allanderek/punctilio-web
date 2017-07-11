@@ -5,7 +5,7 @@
 <h2>Services</h2>
             <p>
                 <ul id="services-list">
-                    <li>Manuscripts,</li>
+                    <li>manuscripts,</li>
                     <li>business publications,</li>
                     <li>website content,</li>
                     <li>student dissertations,</li>
@@ -41,6 +41,51 @@
             </div>
 
 {% endblock contents %}
+
+{% block modals %}
+<div style="text-align:center"><br/>
+    <input id="request-a-quote-toggle" type="checkbox"/>
+    <div class="modal" style="text-align:initial;">
+        <div class="card fluid">
+            <label for="request-a-quote-toggle" class="close"></label>
+            <h3 class="section double-padded">Request a quote</h3>
+            <form class="section">
+                <fieldset>
+                    <div class="input-group vertical">
+                        <label for="manuscript-type">Document type</label>
+                        <select id="manuscript-type">
+                            <option>manuscript</option>
+                            <option>business publication</option>
+                            <option>website content</option>
+                            <option>student dissertation</option>
+                            <option>funeral eulogy</option>
+                            <option>letter</option>
+                            <option>application form</option>
+                            <option>C.V.</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+                    <div class="input-group vertical">
+                        <label for="manuscript-size">Size</label>
+                        <input type="text" size="50" value="" id="manuscript-size" placeholder="Approximate size in words">
+                    </div>
+                    <div class="input-group vertical">
+                        <label for="quote-contact-details">Size</label>
+                        <input type="text" size="50" value="" id="quote-contact-details" placeholder="Name, phone-number">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="section double-padded">
+                <!-- In reality this will probably be part of the form and likely caught by
+                    Javascript which may well then send the mail itself, or something, not sure what -->
+                <label id="send-quote-request-button" class="button primary" for="request-a-quote-toggle">Submit</label>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>
+
+{% endblock modals %}
 
 
 {% block page_scripts %}
