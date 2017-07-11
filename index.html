@@ -17,12 +17,22 @@
             background-image: linear-gradient(#ddadad, #820303);
         }
 
+        header {
+            height: 60px;
+        }
+
         h1{
-            font-size: 38pt;
+            font-size: 48pt;
+            font-weight: bold;
+            text-shadow:
+               -1px -1px 0 #820303,
+                1px -1px 0 #820303,
+               -1px 1px 0 #820303,
+                1px 1px 0 #820303;
         }
 
         h1 small{
-            font-size: 14pt;
+            font-size: 28pt;
         }
 
         #demonstration{
@@ -36,6 +46,13 @@
         }
 
     </style>
+
+    
+<style>
+#request-a-quote-modal-title{
+    display: inline;
+}
+</style>
 
 </head>
 
@@ -85,42 +102,42 @@ The moto/catchphrase is, get it right, first time and every time.
             <hr>
             
 <h2>Services</h2>
-            <p>
-                <ul id="services-list">
-                    <li>manuscripts,</li>
-                    <li>business publications,</li>
-                    <li>website content,</li>
-                    <li>student dissertations,</li>
-                    <li>funeral eulogies,</li>
-                    <li>letters,</li>
-                    <li>application forms,</li>
-                    <li>C.V.s</li>
-                </ul>
-            </p>
-            <hr>
-            <h2>Request a Quote</h2>
-            <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+    <p>
+        <ul id="services-list">
+            <li>manuscripts,</li>
+            <li>business publications,</li>
+            <li>website content,</li>
+            <li>student dissertations,</li>
+            <li>funeral eulogies,</li>
+            <li>letters,</li>
+            <li>application forms,</li>
+            <li>C.V.s</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>Request a Quote</h2>
+    <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
 
-            <hr>
-            <h2>Why is proofreading essential?</h2>
-            <div id="demonstration">
-                <div class="card">
-                    <h3>Before</h3>
-                    <div class="">
-                        <p>
-                            <mark class="secondary">Their</mark> is much <mark class="secondary">which</mark> can go wrong and make your work look sub<mark class="secondary">-</mark>standard. Professional <mark class="secondary">P</mark>roofreading means that you can be sure <mark class="secondary">you&rsquo;re</mark> output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page <mark class="secondary">referencing</mark> and layout errors You can go to print knowing that your best work is complete right<mark class="secondary">. F</mark>irst time and <mark class="secondary">everytime</mark>.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>After</h3>
-                    <div class="">
-                        <p>
-                            There is much that can go wrong and make your work look substandard. Professional proofreading means that<mark class="secondary">,</mark> you can be sure<mark class="secondary">,</mark> your output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page referencing and layout errors<mark class="secondary">.</mark> You can go to print knowing that your best work is complete<mark class="secondary">ly</mark> right, first time and every time.
-                        </p>
-                    </div>
-                </div>
+    <hr>
+    <h2>Why is proofreading essential?</h2>
+    <div id="demonstration">
+        <div class="card">
+            <h3>Before</h3>
+            <div class="">
+                <p>
+                    <mark class="secondary">Their</mark> is much <mark class="secondary">which</mark> can go wrong and make your work look sub<mark class="secondary">-</mark>standard. Professional <mark class="secondary">P</mark>roofreading means that<mark class="secondary">&nbsp;</mark>&nbsp;you can be sure<mark class="secondary">&nbsp;</mark>&nbsp;<mark class="secondary">you&rsquo;re</mark> output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page <mark class="secondary"><span style="display: font-size: small;">referencing</span></mark> and layout errors<mark class="secondary">&nbsp;</mark>&nbsp;You can go to print knowing that your best work is complete<mark class="secondary">&nbsp;</mark>&nbsp; right<mark class="secondary">. F</mark>irst time and <mark class="secondary">everytime</mark>.
+                </p>
             </div>
+        </div>
+        <div class="card">
+            <h3>After</h3>
+            <div class="">
+                <p>
+                    There is much that can go wrong and make your work look substandard. Professional proofreading means that, you can be sure, your output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page referencing and layout errors. You can go to print knowing that your best work is completely right, first time and every time.
+                </p>
+            </div>
+        </div>
+    </div>
 
 
         </div>
@@ -132,8 +149,10 @@ The moto/catchphrase is, get it right, first time and every time.
     <input id="request-a-quote-toggle" type="checkbox"/>
     <div class="modal" style="text-align:initial;">
         <div class="card fluid">
-            <label for="request-a-quote-toggle" class="close"></label>
-            <h3 class="section double-padded">Request a quote</h3>
+            <div class="section">
+                <button>Logo</button><h3 id="request-a-quote-modal-title" class="section double-padded">Request a quote</h3>
+                <label for="request-a-quote-toggle" class="close"></label>
+            </div>
             <form class="section">
                 <fieldset>
                     <div class="input-group vertical">
@@ -155,8 +174,12 @@ The moto/catchphrase is, get it right, first time and every time.
                         <input type="text" size="50" value="" id="manuscript-size" placeholder="Approximate size in words">
                     </div>
                     <div class="input-group vertical">
-                        <label for="quote-contact-details">Size</label>
+                        <label for="quote-contact-details">Contact details</label>
                         <input type="text" size="50" value="" id="quote-contact-details" placeholder="Name, phone-number">
+                    </div>
+                    <div class="input-group vertical">
+                        <input type="checkbox" size="50" id="quote-deadline-required">
+                        <label for="quote-deadline-required">Deadline required</label>
                     </div>
                 </fieldset>
             </form>
@@ -181,6 +204,7 @@ The moto/catchphrase is, get it right, first time and every time.
             <li>Email: info@Punctilio.co.uk</li>
             <li>www.Punctilio.co.uk.</li>
         </ul>
+        Web development by <a href="https://allanderek.github.io/">Allan Clark</a>
     </div>
 </footer>
 
@@ -193,7 +217,8 @@ $(document).ready(function(){
         var main_text = (
             "Manuscript type: " + $('#manuscript-type').val() +
             "\n\nApproximate size: " + $('#manuscript-size').val() +
-            "\n\nContact details: " + $('#quote-contact-details').val()
+            "\n\nContact details: " + $('#quote-contact-details').val() +
+            "\n\nDeadline required: " + $('#quote-deadline-required').val()
             );
         var params = {
             subject: 'Quote request',
