@@ -1,5 +1,12 @@
 {% extends "base.jinja" %}
 {% block title %}Home{% endblock %}
+{% block page_css %}
+<style>
+#request-a-quote-modal-title{
+    display: inline;
+}
+</style>
+{% endblock page_css %}
 
 {% block contents %}
 <h2>Services</h2>
@@ -47,8 +54,10 @@
     <input id="request-a-quote-toggle" type="checkbox"/>
     <div class="modal" style="text-align:initial;">
         <div class="card fluid">
-            <label for="request-a-quote-toggle" class="close"></label>
-            <h3 class="section double-padded">Request a quote</h3>
+            <div class="section">
+                <button>Logo</button><h3 id="request-a-quote-modal-title" class="section double-padded">Request a quote</h3>
+                <label for="request-a-quote-toggle" class="close"></label>
+            </div>
             <form class="section">
                 <fieldset>
                     <div class="input-group vertical">
