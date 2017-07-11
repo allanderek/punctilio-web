@@ -7,4 +7,4 @@ git add index.html accreditation.html testimonials.html &&
 git commit -m "Latest build and commit to gh-pages" &&
 git push origin gh-pages &&
 git checkout master &&
-echo "Visit: https://allanderek.github.io/punctilio-web/""
+echo "Visit: https://allanderek.github.io/punctilio-web/"
