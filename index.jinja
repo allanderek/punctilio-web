@@ -1,0 +1,66 @@
+{% extends "base.jinja" %}
+{% block title %}Home{% endblock %}
+
+{% block contents %}
+<h2>Services</h2>
+            <p>
+                <ul id="services-list">
+                    <li>Manuscripts,</li>
+                    <li>business publications,</li>
+                    <li>website content,</li>
+                    <li>student dissertations,</li>
+                    <li>funeral eulogies,</li>
+                    <li>letters,</li>
+                    <li>application forms,</li>
+                    <li>C.V.s</li>
+                </ul>
+            </p>
+            <hr>
+            <h2>Request a Quote</h2>
+            <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+
+            <hr>
+            <h2>Why is proof </h2>
+            <div id="demonstration">
+                <div class="card">
+                    <h3>Before</h3>
+                    <div class="">
+                        <p>
+                            <mark class="secondary">Their</mark> is much <mark class="secondary">which</mark> can go wrong and make your work look sub<mark class="secondary">-</mark>standard. Professional <mark class="secondary">P</mark>roofreading means that you can be sure <mark class="secondary">you&rsquo;re</mark> output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page <mark class="secondary">referencing</mark> and layout errors You can go to print knowing that your best work is complete right<mark class="secondary">. F</mark>irst time and <mark class="secondary">everytime</mark>.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>After</h3>
+                    <div class="">
+                        <p>
+                            There is much that can go wrong and make your work look substandard. Professional proofreading means that<mark class="secondary">,</mark> you can be sure<mark class="secondary">,</mark> your output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page referencing and layout errors<mark class="secondary">.</mark> You can go to print knowing that your best work is complete<mark class="secondary">ly</mark> right, first time and every time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+{% endblock contents %}
+
+
+{% block page_scripts %}
+<script type="text/javascript">
+/* global $ */
+$(document).ready(function(){
+
+    $('#send-quote-request-button').click(function(){
+        var main_text = (
+            "Manuscript type: " + $('#manuscript-type').val() +
+            "\n\nApproximate size: " + $('#manuscript-size').val() +
+            "\n\nContact details: " + $('#quote-contact-details').val()
+            );
+        var params = {
+            subject: 'Quote request',
+            body: main_text
+        };
+        var url = 'mailto:info@punctilio.co.uk?' + $.param(params);
+        window.open(url);
+    });
+});
+</script>
+{% endblock page_scripts %}
