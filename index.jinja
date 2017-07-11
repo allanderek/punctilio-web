@@ -79,8 +79,12 @@
                         <input type="text" size="50" value="" id="manuscript-size" placeholder="Approximate size in words">
                     </div>
                     <div class="input-group vertical">
-                        <label for="quote-contact-details">Size</label>
+                        <label for="quote-contact-details">Contact details</label>
                         <input type="text" size="50" value="" id="quote-contact-details" placeholder="Name, phone-number">
+                    </div>
+                    <div class="input-group vertical">
+                        <input type="checkbox" size="50" id="quote-deadline-required">
+                        <label for="quote-deadline-required">Deadline required</label>
                     </div>
                 </fieldset>
             </form>
@@ -106,7 +110,8 @@ $(document).ready(function(){
         var main_text = (
             "Manuscript type: " + $('#manuscript-type').val() +
             "\n\nApproximate size: " + $('#manuscript-size').val() +
-            "\n\nContact details: " + $('#quote-contact-details').val()
+            "\n\nContact details: " + $('#quote-contact-details').val() +
+            "\n\nDeadline required: " + $('#quote-deadline-required').val()
             );
         var params = {
             subject: 'Quote request',
