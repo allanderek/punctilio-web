@@ -1,0 +1,208 @@
+<!DOCTYPE>
+<html>
+<head>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-dark.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-lite.min.css">    -->
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-sucroa.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-nord.min.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Punctilio - Home</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(#ddadad, #820303);
+        }
+
+        h1{
+            font-size: 38pt;
+        }
+
+        h1 small{
+            font-size: 14pt;
+        }
+
+        #demonstration{
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .secondary{
+            padding: 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--
+Business Name is Punctilio,
+
+Tel No: 07507 359510,
+Email:info@ Punctilio.co.uk,
+Website: www. Punctilio.co.uk.
+
+Services are
+* manuscripts,
+* business publications,
+* website content,
+* student dissertations,
+* funeral eulogies,
+* letters,
+* C.Vs,
+* application forms.
+
+The moto/catchphrase is, get it right, first time and every time.
+
+-->
+
+<header class="sticky row">
+        <button>Logo</button>
+        <a href="index.html"><button>Home</button></a>
+        <a href="testimonials.html"><button>Testimonials</button></a>
+        <a href="accreditation.html"><button>Accreditation</button></a>
+        <ul>
+            <li>Essex based.</li>
+            <li>Tel No: 07507 359510</li>
+        </ul>
+        <ul>
+            <li>Email: info@Punctilio.co.uk</li>
+            <li>www.Punctilio.co.uk.</li>
+        </ul>
+</header>
+
+<div class="container">
+    <div class="row cols-sm-12 cols-md-10">
+        <div class="col-md-offset-1">
+            <br />
+            <h1>Punctilio <small>Get it right, first time and every time.</small></h1>
+            <hr>
+            
+<h2>Services</h2>
+            <p>
+                <ul id="services-list">
+                    <li>Manuscripts,</li>
+                    <li>business publications,</li>
+                    <li>website content,</li>
+                    <li>student dissertations,</li>
+                    <li>funeral eulogies,</li>
+                    <li>letters,</li>
+                    <li>application forms,</li>
+                    <li>C.V.s</li>
+                </ul>
+            </p>
+            <hr>
+            <h2>Request a Quote</h2>
+            <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+
+            <hr>
+            <h2>Why is proof </h2>
+            <div id="demonstration">
+                <div class="card">
+                    <h3>Before</h3>
+                    <div class="">
+                        <p>
+                            <mark class="secondary">Their</mark> is much <mark class="secondary">which</mark> can go wrong and make your work look sub<mark class="secondary">-</mark>standard. Professional <mark class="secondary">P</mark>roofreading means that you can be sure <mark class="secondary">you&rsquo;re</mark> output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page <mark class="secondary">referencing</mark> and layout errors You can go to print knowing that your best work is complete right<mark class="secondary">. F</mark>irst time and <mark class="secondary">everytime</mark>.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>After</h3>
+                    <div class="">
+                        <p>
+                            There is much that can go wrong and make your work look substandard. Professional proofreading means that<mark class="secondary">,</mark> you can be sure<mark class="secondary">,</mark> your output has been checked for punctuation errors, spelling mistakes, grammar, factual inaccuracies, page referencing and layout errors<mark class="secondary">.</mark> You can go to print knowing that your best work is complete<mark class="secondary">ly</mark> right, first time and every time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center"><br/>
+    <input id="request-a-quote-toggle" type="checkbox"/>
+    <div class="modal" style="text-align:initial;">
+        <div class="card fluid">
+            <label for="request-a-quote-toggle" class="close"></label>
+            <h3 class="section double-padded">Request a quote</h3>
+            <form class="section">
+                <fieldset>
+                    <div class="input-group vertical">
+                        <label for="manuscript-type">Document type</label>
+                        <select id="manuscript-type">
+                            <option>Manuscript</option>
+                            <option>business publication</option>
+                            <option>website content</option>
+                            <option>student dissertation</option>
+                            <option>funeral eulogy</option>
+                            <option>letter</option>
+                            <option>application form</option>
+                            <option>C.V.s</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+                    <div class="input-group vertical">
+                        <label for="manuscript-size">Size</label>
+                        <input type="text" size="50" value="" id="manuscript-size" placeholder="Approximate size in words">
+                    </div>
+                    <div class="input-group vertical">
+                        <label for="quote-contact-details">Size</label>
+                        <input type="text" size="50" value="" id="quote-contact-details" placeholder="Name, phone-number">
+                    </div>
+                </fieldset>
+            </form>
+            <div class="section double-padded">
+                <!-- In reality this will probably be part of the form and likely caught by
+                    Javascript which may well then send the mail itself, or something, not sure what -->
+                <label id="send-quote-request-button" class="button primary" for="request-a-quote-toggle">Submit</label>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="col-sm col-md-10 col-md-offset-1">
+        <ul>
+            <li>Essex based.</li>
+            <li>Tel No: 07507 359510</li>
+            <li>Email: info@Punctilio.co.uk</li>
+            <li>www.Punctilio.co.uk.</li>
+        </ul>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+/* global $ */
+$(document).ready(function(){
+
+    $('#send-quote-request-button').click(function(){
+        var main_text = (
+            "Manuscript type: " + $('#manuscript-type').val() +
+            "\n\nApproximate size: " + $('#manuscript-size').val() +
+            "\n\nContact details: " + $('#quote-contact-details').val()
+            );
+        var params = {
+            subject: 'Quote request',
+            body: main_text
+        };
+        var url = 'mailto:info@punctilio.co.uk?' + $.param(params);
+        window.open(url);
+    });
+});
+</script>
+
+
+</body>
+
+</html>
