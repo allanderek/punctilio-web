@@ -18,7 +18,8 @@
     <div class="modal" style="text-align:initial;">
         <div class="card fluid">
             <div class="section">
-                <button>Logo</button><h3 id="request-a-quote-modal-title" class="section double-padded">Request a quote</h3>
+                <img class="logo-nav" src="images/punctilio-white.png" alt="punctilio logo">
+                <h3 id="request-a-quote-modal-title" class="section double-padded">Request a quote</h3>
                 <label for="request-a-quote-toggle" class="close"></label>
             </div>
             <form class="section">
@@ -64,7 +65,9 @@
 {% endmacro %}
 
 
-
+{% block large_logo %}
+    <img class="logo-title" src="images/punctilio-maroon.png" alt="larger punctilio logo"></img>
+{% endblock large_logo %}
 {% block contents %}
 <h2>Proofreading Services</h2>
     <p>
