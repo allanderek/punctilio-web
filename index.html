@@ -20,7 +20,7 @@
         header {
             height: 60px;
         }
-        
+
         .logo-nav{
             max-height: 50px;
             width: auto;
@@ -55,6 +55,15 @@
 
         .secondary{
             padding: 0;
+        }
+
+        #request-with-sfep-logo{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #sfep-logo-normal{
+            background-color: #000000;
         }
 
     </style>
@@ -130,7 +139,10 @@ The moto/catchphrase is, get it right, first time and every time.
     </p>
     <hr>
     <h2>Request a Quote</h2>
-    <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+    <div id="request-with-sfep-logo">
+        <label class="button primary large" for="request-a-quote-toggle">Request a quote</label><br/><br/>
+        <img id="sfep-logo-normal" src="images/sfep-entry-normal.png" />
+    </div>
     <!-- Or <a href="mailto:info@punctilio.co.uk">email info@punctilio.co.uk</a>. -->
 
     
@@ -183,7 +195,6 @@ The moto/catchphrase is, get it right, first time and every time.
         </div>
     </div>
 </div>
-
 
 
     <hr>
