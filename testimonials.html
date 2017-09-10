@@ -62,8 +62,20 @@
             flex-direction: row;
         }
 
-        #sfep-logo-normal{
+        #sfep-logo-normal,
+        #sfep-accreditation{
             background-color: #000000;
+        }
+
+        #sfep-accreditation{
+            margin-top: 2em;
+        }
+
+        #footer-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
     </style>
@@ -98,7 +110,7 @@ The moto/catchphrase is, get it right, first time and every time.
 <header class="sticky row">
         <a href="index.html"><img class="logo-nav" src="images/punctilio-white.png" alt="punctilio logo"></a>
         <!-- <a href="testimonials.html"><button>Testimonials</button></a> -->
-        <a href="accreditation.html"><button>Accreditation</button></a>
+        <a href="accreditation.html"><button>Accreditations</button></a>
         <ul>
             <li>Essex based.</li>
             <li>Tel No: 07507 359510</li>
@@ -131,14 +143,19 @@ The moto/catchphrase is, get it right, first time and every time.
 </div>
 
 <footer>
-    <div class="col-sm col-md-10 col-md-offset-1">
-        <ul>
-            <li>Essex based.</li>
-            <li>Tel No: 07507 359510</li>
-            <li>Email: info@Punctilio.co.uk</li>
-            <li>www.Punctilio.co.uk.</li>
-        </ul>
-        Web development by <a href="https://allanderek.github.io/">Allan Clark</a>
+    <div class="col-sm col-md-8 col-md-offset-1">
+        <div id="footer-container">
+            <ul>
+                <li>Essex based.</li>
+                <li>Tel No: 07507 359510</li>
+                <li>Email: info@Punctilio.co.uk</li>
+                <li>www.Punctilio.co.uk.</li>
+            </ul>
+            <img id="sfep-logo-normal" src="images/sfep-entry-normal.png" />
+            <div>
+                Web development by <a href="https://allanderek.github.io/">Allan Clark</a>
+            </div>
+        </div>
     </div>
 </footer>
 
