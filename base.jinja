@@ -66,6 +66,13 @@
             background-color: #000000;
         }
 
+        #footer-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
     </style>
 
     {% block page_css %}
@@ -124,14 +131,19 @@ The moto/catchphrase is, get it right, first time and every time.
 </div>
 
 <footer>
-    <div class="col-sm col-md-10 col-md-offset-1">
-        <ul>
-            <li>Essex based.</li>
-            <li>Tel No: 07507 359510</li>
-            <li>Email: info@Punctilio.co.uk</li>
-            <li>www.Punctilio.co.uk.</li>
-        </ul>
-        Web development by <a href="https://allanderek.github.io/">Allan Clark</a>
+    <div class="col-sm col-md-8 col-md-offset-1">
+        <div id="footer-container">
+            <ul>
+                <li>Essex based.</li>
+                <li>Tel No: 07507 359510</li>
+                <li>Email: info@Punctilio.co.uk</li>
+                <li>www.Punctilio.co.uk.</li>
+            </ul>
+            <img id="sfep-logo-normal" src="images/sfep-entry-normal.png" />
+            <div>
+                Web development by <a href="https://allanderek.github.io/">Allan Clark</a>
+            </div>
+        </div>
     </div>
 </footer>
 
