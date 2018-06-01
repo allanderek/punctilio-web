@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
     <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-dark.min.css"> -->
     <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-lite.min.css">    -->
-    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-sucroa.min.css">
+    <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-sucroa.min.css"> -->
     <!-- <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-nord.min.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,6 +13,15 @@
     <title>Punctilio - Testimonials</title>
 
     <style>
+
+        #request-a-quote-toggle{
+            display: none;
+        }
+
+        #request-a-quote-toggle:not(:checked) ~ .modal{
+            display: none;
+        }
+
         body{
             background-image: linear-gradient(#ddadad, #820303);
         }
